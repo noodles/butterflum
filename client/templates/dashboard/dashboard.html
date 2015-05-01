@@ -1,7 +1,49 @@
 <template name="dashboard">
   <div class="template-dashboard">
     <ol class="breadcrumb">
-      <li><a href="{{pathFor 'home'}}"></a><i class="fa fa-tachometer">&nbsp;Home</i></li>
+      <li><a href="{{pathFor 'home'}}"></a><i class="fa fa-tachometer">&nbsp; Home</i></li>
+      <li class="active"><i class="fa fa-cubes"></i> Dashboard</li>
     </ol>
+    <div class="page-header">
+      <p>
+        <input class="biginput" type="text" name="projectNameEnter" id="projectNameEnter" placeholder="Add a Project" value="">
+      </p>
+    </div>
+    <h5> Projects listed by <a class="sortToggle" href="#">name</a></h5>
+    <div>
+    {{#each projects}}
+      {{>project}}
+    {{else}}
+      <h4>No Projects Found!</h4>
+    {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name="project">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+        <p class="pull-right">
+          <i class="fa fa-trash deleteConfirmation"></i>
+        </p>
+        <p>
+          <h5>
+            <a href="/projects/{{_id}}">Project Name</a>
+            <br/> Entered on 12/28/2014
+          </h5>
+        </p>
+      </div>
+      <div class="panel-body">
+        <small>
+          <span>Due for <a href="/customers/{{custname}}">Customer Name</a></span>
+        </small>
+        <br />
+        <small>
+          <span> on 01/01/2015</span>
+        </small>
+      </div>
+    </div>
   </div>
 </template>
