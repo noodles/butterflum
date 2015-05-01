@@ -1,10 +1,49 @@
 <template name="home">
   <div class="template-home">
-    <div class="page-header">
-      <h1>Welcome to {{siteTitle}}</h1>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>{{siteTitle}}</h1>
+        <p class="lead">Project Management for the real world.</p>
+        <p><a href="{{pathFor 'dashboard'}}" class="btn btn-lg btn-success ">My Projects</a></p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <h3><i class="fa fa-users"></i>&nbsp;Team Building</h3>
+          <p>
+            Invite your team to collaborate on your project. They will automaticall see your project once they've been invited.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h3><i class="fa fa-twitch"></i>&nbsp;Store Conversations</h3>
+          <p>
+            Any comments or remarks made on a specific proejct will be stored with the project.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h3><i class="fa fa-inbox"></i>&nbsp;Store Todo Lists</h3>
+          <p>
+            Each project can maintain it's own to do list, so everyone knows what has already been done.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h3><i class="fa fa-upload"></i>&nbsp;Upload Files</h3>
+          <p>
+            Users can upload files.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h3><i class="fa fa-comments-o"></i>&nbsp;Live Chat</h3>
+          <p>
+            You can chat with anyone online to bounce ideas off your colleagues.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h3><i class="fa fa-download"></i>&nbsp;Download Files</h3>
+          <p>
+            Any files that were uploaded to a project, can be downloaded from that location.
+          </p>
+        </div>
+      </div>
     </div>
-    <p>
-      The user is not logged in
-    </p>
   </div>
 </template>
