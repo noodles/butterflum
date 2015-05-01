@@ -1,3 +1,39 @@
 <template name="customers">
-  customers
+  <ol class="breadcrumb">
+    <li><a href="{{pathFor 'home'}}"><i class="fa fa-home"></i> Home</a></li>
+    <li><i class="active fa fa-university"></i> Customers</li>
+  </ol>
+  <div class="col-12">
+    <div class="page-header">
+      <p>
+        <input type="text" placeholder="Add a Customer" name="customername" class="customername biginput" value="">
+      </p>
+    </div>
+    <h5>Customers listed by <a class="sortToggleCustomer" href="#"> name</a></h5>
+    {{#each customers}}
+    {{>customer}}
+    {{else}}
+    <h5>No customers Found!</h5>
+    {{/each}}
+  </div>
+</template>
+
+<template name="customer">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          Customer Name
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <span class="text-muted">Phone Number</span>
+        </p>
+        <p>
+          <span class="text-muted">Contact Name</span>
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
